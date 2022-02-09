@@ -1,0 +1,12 @@
+<button class="btn btn-primary"
+    (click)="onDetailsClick()"
+>
+    Display Details
+</button>
+<p *ngIf="isTextShown">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laudantium officiis quidem, velit sapiente consequatur nulla, eius aliquid, quaerat sequi officia dolorem quia suscipit quod tempore enim magnam nihil vel.</p>
+<ul *ngFor="let click of allClicks, let idx = index"
+    [ngStyle]="{backgroundColor: click>5 ? 'blue' : 'transperent'}"
+    [ngClass]="{'white-text' : click>5 }"
+>
+    <li>{{ click }} idx {{ idx+1 }}</li>
+</ul>
